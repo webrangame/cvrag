@@ -1,0 +1,41 @@
+LangChain RAG Application - Sample Document
+
+What is RAG?
+Retrieval-Augmented Generation (RAG) is a technique that enhances the capabilities of large language models by allowing them to access external knowledge bases. This approach combines two key components:
+
+1. Retrieval: The system searches through a knowledge base to find relevant information based on the user's query.
+
+2. Generation: The retrieved information is used as context for the language model to generate accurate and informed responses.
+
+How RAG Works
+RAG systems work by following these steps:
+
+1. Document Processing: Documents are processed and broken down into smaller chunks or tokens.
+2. Embedding Creation: Each chunk is converted into a vector embedding using an embedding model.
+3. Vector Storage: Embeddings are stored in a vector database for efficient similarity search.
+4. Query Processing: When a user asks a question, the query is also converted to an embedding.
+5. Similarity Search: The system finds the most relevant document chunks based on vector similarity.
+6. Context Retrieval: The relevant chunks are retrieved and used as context.
+7. Response Generation: The LLM generates a response using both the context and the original query.
+
+Benefits of RAG
+- Improved Accuracy: By providing relevant context, RAG systems can give more accurate answers.
+- Up-to-date Information: Knowledge bases can be updated without retraining the model.
+- Citation Support: Users can see the source of information.
+- Cost-Effective: More efficient than fine-tuning models on new data.
+
+Our Implementation
+This RAG application uses:
+- LangChain: For orchestrating the RAG pipeline
+- Google Gemini: As the large language model
+- ChromaDB: As the vector database for embeddings
+- MySQL: For storing document metadata and chat history
+- Streamlit: For the user interface
+
+The application allows users to:
+- Upload documents (PDF, TXT)
+- Automatically process and chunk documents
+- Store embeddings in ChromaDB
+- Query documents using natural language
+- View chat history stored in MySQL
+
